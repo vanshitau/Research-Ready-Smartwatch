@@ -19,10 +19,10 @@ Mimic hardware-based sensors by deriving data from one or more hardware-based se
 
 ## Motion Sensor API
 Many sensors are provided by the Android Platform which allow you to monitor the motion of the device. The four main sensor properties include:
-Rotation Vector 
-Gravity 
-Accelerometer 
-Gyroscope
+1. Rotation Vector 
+2. Gravity 
+3. Accelerometer 
+4. Gyroscope
 
 Motion sensors allow the monitoring of device movements which are provided by the user, including tilt, shake, rotation or swing. In the first case, the motion is monitored relative to the device/application’s frame of reference. In the second case, the motion is monitored relative to the world’s frame of reference. Motion sensors are not specifically used with other sensors, such as the geomagnetic field sensor to determine the position of the device relative to the frame of reference of the world. Motion sensors return a multidimensional array of sensor values for each ‘SensorEvent’. 
 
@@ -48,8 +48,6 @@ The rotation vector is used to detect gestures and monitor angular change and re
 The gravity sensor is used to detect gestures and monitor angular change and relative orientation change. 
 
 
-![Motion Sensor Example](path/to/motion_sensor_image.png)
-
 ### Table 1 – Motion Sensor Methods
 
 | Sensor | Event Data | Description | API |
@@ -64,9 +62,9 @@ The gravity sensor is used to detect gestures and monitor angular change and rel
 
 ## Position Sensor API
 Useful to determine a device's physical position in the world's frame of reference. Android Framework provides (3) sensors to determine the position of the device:
-Geomagnetic Field (hardware-based)
-Accelerometer (hardware-based)
-Proximity (hardware-based)
+1. Geomagnetic Field (hardware-based)
+2. Accelerometer (hardware-based)
+3. Proximity (hardware-based)
 
 Due to the deprecation of the orientation sensor, determining device orientation – for more information, use readings from the device’s accelerometer and geomagnetic field sensor. Additionally, position sensors are not typically used to monitor device movement/motion (i.e. shake, tilt, thrust) – it is used in motion sensors.
 
@@ -86,7 +84,6 @@ Similar to the geomagnetic field sensor, except no hard iron calibration is appl
 Determines how far an object is from a device. Usually used to determine how far away the user’s head is from the face of the device or used for wakeup activation. Most proximity sensors return absolute distance (cm); some only return binary values (near/far).
 
 
-![Position Sensor Example](path/to/position_sensor_image.png)
 
 ### Table 2 – Position Sensor Methods
 
@@ -104,25 +101,26 @@ Determines how far an object is from a device. Usually used to determine how far
 Environment sensors monitor atmospheric conditions and return a single sensor value for each `SensorEvent`.
 
 Android Framework provides (4) sensors to monitor environmental properties:
-Relative Ambient Humidity (hardware-based)
-Illuminance (hardware-based)
-Ambient Pressure (hardware-based)
-Ambient Temperature (hardware-based)
+1. Relative Ambient Humidity (hardware-based)
+2. Illuminance (hardware-based)
+3. Ambient Pressure (hardware-based)
+4. Ambient Temperature (hardware-based)
 
-Unlike motion and position sensors, which return a multidimensional array of sensor values for each ‘SensorEvent’ – environment sensors return a single sensor value. 
-Unlike motion and position sensors, which require high/low-pass filtering, environment sensors do not typically require any data filtering/processing
+* Unlike motion and position sensors, which return a multidimensional array of sensor values for each ‘SensorEvent’ – environment sensors return a single sensor value. 
+* Unlike motion and position sensors, which require high/low-pass filtering, environment sensors do not typically require any data filtering/processing
 
-Light, Pressure, and Temperature Sensors
+## Light, Pressure, and Temperature Sensors:
 Raw data acquired from light, pressure, and temperature usually requires no calibration, filtering, or modification. 
 
-Humidity Sensor
+## Humidity Sensor: 
 One can acquire raw sensor data by using same method as light, pressure, and temperature; however, if device has both a humidity sensor (‘TYPE_RELATIVE_HUMIDITY’) and temperature sensor (‘TYPE_AMBIENT_TEMPERATURE’), you can use these two data streams to calculate:
 
 Dew Point – temperature which given volume of air must be cooled, at constant barometric pressure, for water vapor to condense into water:
 
-![Environment Sensor Example](path/to/environment_sensor_image.png)
+![Environment Sensor Example](dew_point.png)
 
 Absolute Humidity – mass of water vapor in given volume of dry air (regardless of air temperature) measured in [grams/meter3]:
+![Environment Sensor Example](absolute_humidity.png)
 
 
 ### Table 3 – Environment Sensor Methods
