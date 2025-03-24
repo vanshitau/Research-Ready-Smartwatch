@@ -11,10 +11,10 @@ Android supports three broad categories of sensors:
 | Acceleration forces and rotational forces along three axes (x, y, z). | Various environmental parameters: barometers, photometers, thermometers. | Physical position of the device. |
 
 ### Sensor Types
-#### Hardware-based Sensors
+* #### Hardware-based Sensors
 Physical components built into the wearable device that measure specific environmental properties (e.g., acceleration, geomagnetic field).
 
-#### Software-based Sensors
+* #### Software-based Sensors
 Mimic hardware-based sensors by deriving data from one or more hardware-based sensors (composite/virtual/synthetic sensors).
 
 ## Motion Sensor API
@@ -115,12 +115,14 @@ Raw data acquired from light, pressure, and temperature usually requires no cali
 ## Humidity Sensor: 
 One can acquire raw sensor data by using same method as light, pressure, and temperature; however, if device has both a humidity sensor (‘TYPE_RELATIVE_HUMIDITY’) and temperature sensor (‘TYPE_AMBIENT_TEMPERATURE’), you can use these two data streams to calculate:
 
-Dew Point – temperature which given volume of air must be cooled, at constant barometric pressure, for water vapor to condense into water:
+* Dew Point – temperature which given volume of air must be cooled, at constant barometric pressure, for water vapor to condense into water:
 
 ![Environment Sensor Example](dew_point.png)
 
-Absolute Humidity – mass of water vapor in given volume of dry air (regardless of air temperature) measured in [grams/meter3]:
+* Absolute Humidity – mass of water vapor in given volume of dry air (regardless of air temperature) measured in [grams/meter3]:
+
 ![Environment Sensor Example](absolute_humidity.png)
+
 
 
 ### Table 3 – Environment Sensor Methods
