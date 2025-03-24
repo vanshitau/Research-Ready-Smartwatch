@@ -119,7 +119,7 @@ One can acquire raw sensor data by using same method as light, pressure, and tem
 
 ![Environment Sensor Example](dew_point.png)
 
-* Absolute Humidity – mass of water vapor in given volume of dry air (regardless of air temperature) measured in [grams/meter3]:
+* Absolute Humidity – mass of water vapor in given volume of dry air (regardless of air temperature) measured in [grams/meter^3]:
 
 ![Environment Sensor Example](absolute_humidity.png)
 
