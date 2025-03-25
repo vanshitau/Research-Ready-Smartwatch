@@ -3,7 +3,7 @@
 ## Overview
 This project aims to build a custom Android Wear application utilizing modern smartwatch sensors for continuous authentication and smart office analytics. The resulting prototype contributes to research in the MuLab and CSRL research labs. Students in Kingston may access modern wearables to test the application.
 
-## Watch
+## Watch/Emulator
 ![Watch Example](watch.png)
 
 ## Web Server
