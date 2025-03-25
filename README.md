@@ -6,7 +6,7 @@ This project aims to build a custom Android Wear application utilizing modern sm
 ## Watch
 ![Watch Example](watch.png)
 
-## Webserver
+## Web Server
 ![Server Example](server.png)
 
 ## Android Framework
